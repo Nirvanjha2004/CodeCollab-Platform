@@ -1,0 +1,1 @@
+export * from "@mrizkiaiman/configs/tailwind/tailwind.config";

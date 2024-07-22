@@ -1,0 +1,45 @@
+{
+  "name": "project",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "build:docker:cpp": "docker build -t my-cpp-compiler ./packages/docker-cpp",
+    "build:docker:python": "docker build -t my-python-interpreter ./packages/docker-python",
+    "push:docker:cpp": "docker tag my-cpp-compiler myregistry/my-cpp-compiler && docker push myregistry/my-cpp-compiler",
+    "push:docker:python": "docker tag my-python-interpreter myregistry/my-python-interpreter && docker push myregistry/my-python-interpreter"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/dockerode": "^3.3.30",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.4",
+    "ts-node": "^10.9.2",
+    "turbo": "latest",
+    "typescript": "^5.5.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@7.24.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "codemirror": "^5.65.16",
+    "cors": "^2.8.5",
+    "dockerode": "^4.0.2",
+    "express": "^4.19.2",
+    "tailwindcss-filters": "^3.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+.a-demo-cm6 {
+  padding-top:3%;
+  resize: vertical;
+  overflow: auto;
+}
+.a-demo-cm6 .cm-editor {
+  height: 100%;
+  max-height: 300px;
+  min-width: 600px;
+  max-width: 600px;
+
+}
+.a-demo-cm6 .cm-gutter,
+.a-demo-cm6 .cm-contnet {
+  padding-top:10%;
+  min-height: 100px;
+}
